@@ -8,7 +8,7 @@ services:
       - traefik.http.routers.my-site.rule=Host(`staging.jacobamrine.com`)
       - traefik.http.routers.my-site.entrypoints=websecure
       - traefik.http.routers.my-site.tls=true
-      - traefik.http.routers.my-site.tls.certresolver=cloudflare
+      - traefik.http.routers.my-site.tls.certresolver=le
       - traefik.http.services.my-site.loadbalancer.server.port=80
     networks:
       - proxy
